@@ -1,0 +1,1 @@
+export {VirtualRepeatComponent} from "./virtual-repeat.component";

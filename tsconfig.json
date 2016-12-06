@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

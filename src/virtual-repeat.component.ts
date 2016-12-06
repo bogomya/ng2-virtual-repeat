@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 @Component({
   selector: 'virtual-repeat',
   templateUrl: './virtual-repeat.component.html',
-  styleUrls: ['virtual-repeat.component.scss']
+  styles: [require('virtual-repeat.component.scss')]
 })
 export class VirtualRepeatComponent implements OnInit, DoCheck, AfterViewInit {
   @Input() set elements(items: Array<any>) {
@@ -131,7 +131,7 @@ export class VirtualRepeatComponent implements OnInit, DoCheck, AfterViewInit {
     }
   }
 
-  private virtualRepeatUpdate(items, oldItems) {
+  private virtualRepeatUpdate(items: Array<any>, oldItems: Array<any>) {
     const itemsLength = items && items.length || 0;
     let lengthChanged = false;
 
@@ -161,7 +161,7 @@ export class VirtualRepeatComponent implements OnInit, DoCheck, AfterViewInit {
     this.sizeScroller(itemsSize);
   }
 
-  private sizeScroller(size) {
+  private sizeScroller(size: number) {
     this.sizer.nativeElement[this.getDimensionName()] = size + 'px';
   }
 
