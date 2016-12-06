@@ -1,0 +1,6 @@
+<div class="virtual-repeat-scroller" #scroller>
+  <div class="virtual-repeat-sizer" #sizer></div>
+  <div class="virtual-repeat-offsetter" #offsetter>
+    <template ngFor [ngForOf]="displayedItems" [ngForTemplate]="itemTemplate"></template>
+  </div>
+</div>

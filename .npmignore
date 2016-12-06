@@ -1,0 +1,14 @@
+/examples
+/node_modules
+/src
+npm-debug.log
+
+
+# IDEs and editors
+/.idea
+/.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
