@@ -2,7 +2,8 @@ import {
   Component, OnInit, Input, IterableDiffer, TemplateRef,
   ChangeDetectorRef, IterableDiffers, DoCheck, ElementRef, ContentChild, ViewChild, AfterViewInit
 } from '@angular/core';
-import {Observable} from "rxjs";
+
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'virtual-repeat',
@@ -71,7 +72,7 @@ export class VirtualRepeatComponent implements OnInit, DoCheck, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    //TODO 'scroll wheel touchmove touchend'
+    // TODO 'scroll wheel touchmove touchend'
     Observable
       .fromEvent(this.scroller.nativeElement, 'scroll')
       .debounceTime(5)
@@ -103,7 +104,7 @@ export class VirtualRepeatComponent implements OnInit, DoCheck, AfterViewInit {
     this.newStartIndex = Math.max(0, this.newStartIndex - this.NUM_EXTRA);
   }
 
-  private handleScroll() : void {
+  private handleScroll(): void {
     const scrollerElement = this.scroller.nativeElement;
     const offset = this.isHorizontal() ? scrollerElement.scrollLeft : scrollerElement.scrollTop;
 
@@ -150,15 +151,15 @@ export class VirtualRepeatComponent implements OnInit, DoCheck, AfterViewInit {
     }
 
     this.displayedItems = this.items.slice(this.newStartIndex, this.newEndIndex);
-
     this.startIndex = this.newStartIndex;
     this.endIndex = this.newEndIndex;
   }
 
-  private setScrollSize(itemsSize : number) : void {
-    if (this.scrollSize == itemsSize) return;
-    this.scrollSize = itemsSize;
-    this.sizeScroller(itemsSize);
+  private setScrollSize(itemsSize: number): void {
+    if (this.scrollSize !== itemsSize) {
+      this.scrollSize = itemsSize;
+      this.sizeScroller(itemsSize);
+    }
   }
 
   private sizeScroller(size: number) {

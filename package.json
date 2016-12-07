@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Virtual scroll for Angular 2",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "tslint \"src/**/*.ts\""
   },
   "author": "Dmitry Bogomya <dmitry.bogomya@gmail.com>",
   "license": "MIT",
