@@ -7,7 +7,7 @@
   },
   "author": "Dmitry Bogomya <dmitry.bogomya@gmail.com>",
   "license": "MIT",
-  "keywords": ["angular2", "virtual repeat", "vitrual scroll", "repeat", "scroll", "virtual"],
+  "keywords": ["angular", "virtual-repeat", "vitrual-scroll", "repeat", "scroll", "virtual", "lazy"],
   "dependencies": {
     "@angular/common": "^2.1.0",
     "@angular/compiler": "^2.1.0",
