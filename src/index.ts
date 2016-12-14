@@ -1,1 +1,2 @@
-export {VirtualRepeatComponent} from "./virtual-repeat.component";
+export {VirtualRepeatModule} from './virtual-repeat.module';
+export {VirtualRepeatComponent} from './virtual-repeat.component';

@@ -8,9 +8,12 @@
     "target": "es5",
     "sourceMap": true,
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./",
+    "types": ["node"],
+    "lib": ["es2015", "dom"]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }
